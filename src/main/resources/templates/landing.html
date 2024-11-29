@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WareSoft - Tienda de Repuestos de Hardware</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav marquee {
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #444;
+        }
+
+        /* Encabezado principal */
+        header {
+            background: linear-gradient(45deg, #ff6347, #ff4500);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Tarjetas con iconos */
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 20px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .card {
+            background: #fff;
+            width: 280px;
+            margin-bottom: 200px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card i {
+            font-size: 50px;
+            color: #ff6347;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <marquee behavior="scroll" direction="left">Bienvenidos a WareSoft, tu tienda de repuestos de hardware. ¡Encuentra lo que necesitas aquí!</marquee>
+        <div class="nav-links">
+            <a href="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+            <a href="/autores"><i class="fas fa-user"></i> Autores</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Bienvenido a WareSoft</h1>
+        <p>Tu tienda de repuestos de hardware con productos de calidad y al mejor precio</p>
+    </header>
+
+    <!-- Tarjetas con iconos -->
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Quiénes Somos</h3>
+            <p>Somos una empresa dedicada a la venta de repuestos de hardware de alta calidad.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-cogs"></i>
+            <h3>Nuestros Servicios</h3>
+            <p>Ofrecemos asesoría técnica y venta de repuestos para todo tipo de equipos.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Garantía de Calidad</h3>
+            <p>Todos nuestros productos tienen garantía, garantizando su excelente rendimiento.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WareSoft. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

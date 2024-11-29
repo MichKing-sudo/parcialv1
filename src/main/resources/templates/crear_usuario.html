@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header nav {
+            margin-top: 20px;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav a:hover {
+            background-color: #ff4500;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 30px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button[type="submit"] {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff4500;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crear Nuevo Usuario</h1>
+        <nav>
+            <a href="/usuarios">Volver al Listado de Usuarios</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Formulario de Creación de Usuario</h2>
+        <form action="/usuarios/nuevo" method="post">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="role">Rol:</label>
+            <select id="role" name="role" required>
+                <option value="ADMINISTRADOR">Administrador</option>
+                <option value="VENDEDOR">Vendedor</option>
+                <option value="AUXILIAR">Auxiliar</option>
+                <option value="CLIENTE">Cliente</option>
+            </select><br>
+
+            <button type="submit">Crear Usuario</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Empresa Hardware. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

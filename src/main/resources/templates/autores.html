@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentas y Autores - WareSoft</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Author Cards */
+        .authors-list {
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .author {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .author:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .author i {
+            font-size: 50px;
+            color: #4e54c8;
+            margin-bottom: 15px;
+            border: 2px solid #4e54c8;
+            border-radius: 50%;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .author h3 {
+            color: #4e54c8;
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .author p {
+            color: #666;
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        /* Account Cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card i {
+            font-size: 50px;
+            color: #4e54c8;
+            margin-bottom: 15px;
+            border: 2px solid #4e54c8;
+            border-radius: 50%;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .card h3 {
+            color: #4e54c8;
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #333;
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        /* Button Styling */
+        .btn-home {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-home:hover {
+            background-color: #e55d4e;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-home:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cuentas y Autores - WareSoft</h1>
+    
+    <!-- Author Cards -->
+    <div class="authors-list">
+        <div class="author">
+            <i class="fas fa-code"></i>
+            <h3>Carlos Manuel Hernández Herrera</h3>
+            <p>Desarrollador</p>
+        </div>
+        <div class="author">
+            <i class="fas fa-tools"></i>
+            <h3>Andrés David Acosta</h3>
+            <p>Desarrollador</p>
+        </div>
+    </div>
+
+    <!-- Account Cards -->
+    <div class="card-container">
+        <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>Usuario Administrador</h3>
+            <p>user:adminml</p>
+            <p>Contraseña:9090l</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>Usuario Vendedor</h3>
+            <p>user: vendedormn</p>
+            <p>Contraseña:8080mn</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>Usuario auxiliar</h3>
+            <p>user: auxilimt</p>
+            <p>Contraseña: 5050mt</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>Usuario Cliente</h3>
+            <p>user: CarlosBarragan</p>
+            <p>Contraseña: barraga123</p>
+        </div>
+    </div>
+
+    <button class="btn-home" onclick="location.href='/'">Volver a Inicio</button>
+</body>
+</html>
+

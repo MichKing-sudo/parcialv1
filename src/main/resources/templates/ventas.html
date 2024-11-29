@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas del Usuario</title>
+</head>
+<body>
+    <h1>Ventas del Usuario</h1>
+
+    <!-- Mostrar el mensaje de error si el usuario no existe -->
+    <div th:if="${error}">
+        <p th:text="${error}" style="color: red;"></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID Venta</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Itera sobre las ventas y muestra sus datos -->
+            <tr th:each="venta : ${ventas}">
+                <td th:text="${venta.id}"></td>
+                <td th:text="${venta.producto.nombre}"></td> <!-- Asumiendo que Producto tiene un método getNombre() -->
+                <td th:text="${venta.cantidad}"></td>
+                <td th:text="${venta.total}"></td>
+                <td th:text="${venta.fechaVenta}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
